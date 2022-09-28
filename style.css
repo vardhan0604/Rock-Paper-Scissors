@@ -3,6 +3,7 @@ html { font-size: 62.5%; }
 body{
     background-color: rgb(230, 163, 189);
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 .heading{
     text-align: center;
