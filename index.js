@@ -42,7 +42,7 @@ function declare(){
     let a= score.innerText
     console.log(a)
     if(a>=5 && b<5){
-        console.groupCollapsed("yay baby")
+       
         outcome.style.transform="scale(5)";
         setTimeout(function(){
             outcome.style.transform="scale(1)"
