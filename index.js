@@ -42,10 +42,14 @@ function su(){
     if(x==="You Win!!"){
         scoreR++;
         score.innerText=scoreR;
-    }if(x==="You Lose!"){
+        score.style.color="green"
+    }else if(x==="You Lose!"){
         scoreR--;
         score.innerText=scoreR;
+        score.style.color="red"
 
+    }else{
+        score.style.color="yellow"
     }
 }
 
