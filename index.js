@@ -3,12 +3,14 @@ let rock=document.getElementById("Rock");
 let paper=document.getElementById("paper");
 let sci=document.getElementById("Scissors");
 let outcome=document.getElementById("outcome");
-let score=document.getElementById("score-result");
+let score=document.getElementById("score-result-p");
+let scorec=document.getElementById("score-result-c");
 
 
 let your=document.getElementById("y-c")
 let comp=document.getElementById("comp")
-let scoreR=0;
+let scorep=0;
+let scorez=0;
 let c=["Rock","Paper","Scissors"];
 
 function yc(e){
@@ -40,16 +42,14 @@ function result(){
 function su(){
     let x=outcome.innerText;
     if(x==="You Win!!"){
-        scoreR++;
-        score.innerText=scoreR;
-        score.style.color="green"
+        scorep++;
+        score.innerText=scorep;
+       
     }else if(x==="You Lose!"){
-        scoreR--;
-        score.innerText=scoreR;
-        score.style.color="red"
+        scorez++;
+        scorec.innerText=scorez;
+        
 
-    }else{
-        score.style.color="yellow"
     }
 }
 

@@ -79,3 +79,19 @@ body{
     font-size: 3.2rem;
     font-weight: 800;
 }
+#score{
+    font-weight: 700;
+}
+#score-result-p{
+    font-weight: 700;
+    font-size: 2.4rem;
+    padding-left: 2.4rem;
+}
+#score-result-c{
+    font-weight: 700;
+    font-size: 2.4rem;
+    padding-left: 2.4rem;
+}
+.score-result{
+    text-align: center;
+}
