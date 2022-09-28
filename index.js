@@ -23,8 +23,7 @@ function yc(e){
 function result(){
     let b=comp.innerText
     let a=your.innerText
-    console.log(a)
-    console.log(b)
+    
     if(a===b){
         outcome.innerText="Tie"
         outcome.style.color="yellow"
@@ -37,7 +36,54 @@ function result(){
     }
     
 }
+function declare(){
+    
+    let b= scorec.innerText
+    let a= score.innerText
+    console.log(a)
+    if(a>=5 && b<5){
+        console.groupCollapsed("yay baby")
+        outcome.style.transform="scale(5)";
+        setTimeout(function(){
+            outcome.style.transform="scale(1)"
+        },1000)
+        setTimeout(function(){
+            reset()
+        },1000)
+        
+    }else if(a===b===5 || a===b===5.5){
+        console.log("tieee")
+        setTimeout(function(){
+            outcome.style.transform="scale(1)"
+        },100)
+        
+        setTimeout(function(){
+            reset()
+        },1000)
+    }
+    else if(b>=5 && a<5){
+        console.log("losing hogyi")
+        outcome.style.transform="scale(4)";
+        setTimeout(function(){
+            outcome.style.transform="scale(1)"
+        },1000) 
+        setTimeout(function(){
+            reset()
+        },1000)
+       }
+}
 
+function reset(){
+  
+    your.innerText="";
+    comp.innerText="";
+    score.innerText="0";
+    scorec.innerText="0";
+    outcome.innerText="";
+    scorep=0;
+scorez=0;
+
+}
 
 function su(){
     let x=outcome.innerText;
@@ -50,6 +96,11 @@ function su(){
         scorec.innerText=scorez;
         
 
+    }else {
+        scorep+=0.5;
+        score.innerText=scorep;
+        scorez+=0.5;
+        scorec.innerText=scorez;
     }
 }
 
@@ -58,17 +109,24 @@ function su(){
 
 
 rock.addEventListener('click', function() {
+    if(scorep<5 && scorez<5){
     yc("Rock")
     result()
     su()
+    declare()}
 });
 paper.addEventListener('click',function() {
+    if(scorep<5 && scorez<5){
     yc("Paper")
     result()
     su()
+    declare()}
 });
 sci.addEventListener('click',function() {
+    if(scorep<5 && scorez<5){
     yc("Scissors")
     result()
     su()
+    declare()
+    }
 });
