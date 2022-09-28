@@ -40,7 +40,7 @@ function declare(){
     
     let b= scorec.innerText
     let a= score.innerText
-    console.log(a)
+   
     if(a>=5 && b<5){
        
         outcome.style.transform="scale(5)";
@@ -51,18 +51,16 @@ function declare(){
             reset()
         },1000)
         
-    }else if(a===b===5 || a===b===5.5){
-        console.log("tieee")
+    }else if(a===b && a>=5){
+        outcome.style.transform="scale(5)";
         setTimeout(function(){
             outcome.style.transform="scale(1)"
-        },100)
-        
+        },1000)
         setTimeout(function(){
             reset()
         },1000)
     }
     else if(b>=5 && a<5){
-        console.log("losing hogyi")
         outcome.style.transform="scale(4)";
         setTimeout(function(){
             outcome.style.transform="scale(1)"
