@@ -56,7 +56,7 @@ function su(){
 rock.addEventListener('click', function() {
     yc("Rock")
     result()
-    // su()
+    su()
 });
 paper.addEventListener('click',function() {
     yc("Paper")
